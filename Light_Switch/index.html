@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Switch</title>
+    <!-- CSS code for the div light_container -->
+    <style>
+        .light_container{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 15%;
+        }
+    </style>
+</head>
+<body>
+    <div class="light_container">
+        <h2>Turn the light on and off </h2>
+        <!-- margin-top: -1% to reduce the gap between two lines -->
+         <h2 style="margin-top: -1%;">by clicking the bulb!</h2>
+        <img id="Image" onclick="turnOnOff()"
+        src="https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg" width="200px">
+    </div>
+    
+    <script>
+        // implementation of turnOnOff function -->
+        function turnOnOff(){
+            // taking image in image variable
+            var image = document.getElementById('Image');
+        
+            //Match the image name
+            //whether it is ONbulb or OFFbulb
+            //change image to OFFbulb.jpg if
+            //it match with ONbulb otherwise
+            //change it to ONbulb.jpg -->
+            if (image.src.match("ONbulb"))
+            {
+                // alert("For Offbulb");
+                image.src = "https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg";
+            }
+                
+            else{
+                // alert("For Onbulb");
+                image.src = "https://media.geeksforgeeks.org/wp-content/uploads/ONbulb.jpg";
+            }
+        }
+    </script>
+</body>
+</html>
